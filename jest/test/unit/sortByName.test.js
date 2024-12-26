@@ -20,4 +20,20 @@ describe("Books names test suit", () => {
       sorting.sortByName([])
     ).toEqual([]);
   });
+
+  it("Sorted Books names should return same result", () => {
+    expect(
+      sorting.sortByName([
+        "Властелин Колец",
+        "Властелин Колец",
+        "Волшебник изумрудного города",
+        "Гарри Поттер",
+      ])
+    ).toEqual([
+      "Властелин Колец",
+      "Властелин Колец",
+      "Волшебник изумрудного города",
+      "Гарри Поттер",
+    ]);
+  });
 });
